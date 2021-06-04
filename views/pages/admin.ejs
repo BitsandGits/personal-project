@@ -1,0 +1,24 @@
+<%- include("../partials/head") -%>
+<%- include("../partials/nav") -%>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="container">
+            <h1>ADMIN PAGE</h1>
+            <input type="button" class=button onclick="location.href='./admin-console/create-person';" value="ADD NEW CONTACT">
+            <table>
+                <tr>
+                    <th>NAME</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+                <% allPersons.forEach(person => { %>
+                    <%- include("../partials/person-listing", {person:person}) -%>
+                <% }); %>
+            </table>
+            <br>
+            <br>
+        </div>
+    </div>
+
+<%- include("../partials/footer") -%>

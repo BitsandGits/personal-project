@@ -1,0 +1,10 @@
+<tr>
+    <td><%= person.name %></td>
+    <td><a href="/admin-console/update-person/<%= person._id %>"><button>EDIT</button></a></td> 
+    <!-- href clears out url, start from beginning -->
+    <td>
+        <form action="/persons/<%= person._id %>?_method=DELETE" method="POST">
+        <button type="submit">DELETE</button>
+        </form>  
+    </td>
+</tr>

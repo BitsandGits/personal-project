@@ -1,0 +1,330 @@
+/* VARIABLES */
+:root{
+    --teal: #006B6B;
+    --light-teal: #009E9E;
+    --yellow: #FCCF14;
+    --blue: #063C5E;
+    --gray: #C2C2C2;
+    --grey: #C2C2C2;
+    --white: #FFFFFF;
+    --black:#000000;
+}
+
+/* ELEMENT */
+a{
+    text-decoration:none;
+}
+h1, h2{
+    text-align: center;
+    color:var(--blue);
+    font-family: 'Fredericka the Great', cursive;
+}
+h3{
+    color:var(--yellow);
+    font-family: 'Fredericka the Great', cursive;
+}
+ul{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.button{
+    background-color: var(--yellow);
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    display: block;
+}
+button{
+    background-color: var(--yellow);
+    text-align: center;
+    width:fit-content;
+    margin: 0px 5px;
+    align-self: center;
+}
+
+/* BODY */
+body {
+    font-family: 'Dancing Script', cursive;    
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    /* overflow-x: hidden; */
+    background-image: linear-gradient(180deg,var(--white),var(--teal));
+}
+
+/* HEADER */
+.logo{
+    background-color: var(--blue);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.logo img{
+    max-width: 300px;
+}
+
+.topnav{
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+}
+.topnav a{
+    float: left;
+    color: var(--white);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Fredericka the Great', cursive;
+}    
+.topnav a:hover {
+    background-color: var(--white);
+    color: var(--black);
+}    
+.topnav a:active {
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-weight: bold;
+}
+.logo i{
+    display: none;
+    padding: 1.5rem 0;
+}
+
+/* CONTENT */
+.content img{
+    width:200px;
+}
+.container{
+    border: 3px solid var(--blue);
+    padding: 40px;
+    margin: 50px;
+    background-color:var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* FOOTER */
+.footer{
+    background-color:var(--blue);
+    color: var(--white);
+    border-top: 5px solid var(--yellow);
+    padding:10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.footer a{
+    color: var(--white);
+    display:block;
+    text-decoration: none;
+    font-family: 'Fredericka the Great', cursive;
+}
+.footer a:hover {
+    background-color: var(--white);
+    color: var(--black);
+}    
+.footer a:active {
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-weight: bold;
+}
+.footer img{
+    width:150px;
+}
+.footer span{
+    font-family: 'Fredericka the Great', cursive;
+}
+.cell{
+    display:inline-block;
+    margin: 10px 20px;
+    vertical-align: text-top;
+}
+
+/* INDEX PAGE */
+.index-all-books{ 
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.index-book{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    text-align: center;
+    width:200px;
+    padding:5px 20px;
+}
+
+/* COMIC CARD */
+.card{
+    margin: 50px auto;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    font-size: large;
+    color: var(--yellow);
+    font-weight: bold;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 10px 20px;
+}
+.card-top{
+    background-color: var(--blue);
+    border-radius: 40px 40px 0px 0px;
+    border: 5px solid var(--yellow);
+    text-align: center;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-top img{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    margin: 25px;
+    border:2px solid var(--white);
+    border-radius: 40px;
+}
+.card-bottom{
+    background-color: var(--white);
+    border-radius: 0px 0px 40px 40px;
+    padding: 40px;
+    border: 5px solid var(--yellow);
+    border-top:0;
+}
+
+/* TABLE */ 
+td,th{
+    border:1px solid var(--blue);
+    height: 20px;
+    min-width:fit-content;
+    padding: 5px 10px;
+}
+table{
+    border-collapse: collapse;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+tr:nth-child(odd){
+    background-color: var(--gray);
+} 
+
+/* FORM */
+form{
+    width:70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+form div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width:100%;
+    align-items: stretch;
+}
+input, select, textarea{
+    margin: 10px;
+    flex-grow:1;
+}
+label{
+    margin: 10px;
+    text-align: right;
+    flex-grow: 0;
+    width:150px;
+}
+
+/* BUTTONS ON PAGES */
+input[type=button], input[type=submit]{
+    background-color: var(--yellow);
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    display: block;
+}
+input[value="EDIT"]{
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    display: block;
+}
+
+/* RESPONSIVE DESIGN */
+/* mobile */
+@media screen and (max-width: 768px) {
+    .topnav{
+        display: none;
+    }
+    .topnav.open {
+        display: block;
+    }
+    .logo i{
+        display: flex;
+        justify-content: space-around;
+        color:var(--white);
+        margin: auto 2em;
+    }
+    .footer{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .container{
+        padding: 20px;
+        margin: 20px;
+    }
+    form{
+        width:100%;
+    }
+    label{
+        text-align: left;
+    }
+    input, select, textarea{
+        margin: 10px 0px;
+    }
+    td,th{
+        padding: 5px 5px;
+    }
+    table{
+        overflow-x: scroll;
+        margin: 20px;
+    }
+} 
+/* card display for large screen */
+@media screen and (min-width: 1024px){
+    .card{
+        display: flex;
+        flex-flow: row nowrap;
+        border-radius: 40px 40px 40px 40px;
+        border: 5px solid var(--yellow);
+    }
+    .card-top{
+        border-radius: 35px 0px 0px 35px;
+        border: none;
+    }
+    .card-bottom{
+        border-radius: 0px 35px 35px 0px;
+        border: none;
+    }
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--yellow);
+}

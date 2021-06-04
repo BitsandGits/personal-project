@@ -1,0 +1,18 @@
+<%- include("../partials/head") -%>
+<%- include("../partials/nav") -%>
+
+    <!-- CONTENT -->
+    <div class="card">
+        <div class="card-top">
+            <p class="title"><%= thisPerson.name %></p>
+            <img src="" alt="Photo" />
+        </div>
+        <div class="card-bottom">
+            <p><span style="color: #063C5E;font-weight: bold;text-decoration: underline;">Name:</span> <span style="font-style: italic;"> <%= thisPerson.title %></span></p>
+            <p><span style="color: #063C5E;font-weight: bold;text-decoration: underline;">Frequency:</span> <%= thisPerson.frequency %></p>
+            <p><span style="color: #063C5E;font-weight: bold;text-decoration: underline;">Last Contact:</span> <%= thisPerson.date %></p>
+            <p><span style="color: #063C5E;font-weight: bold;text-decoration: underline;">Notes:</span> <%= thisPerson.notes %></p>
+        </div>
+    </div>
+
+<%- include("../partials/footer") -%>

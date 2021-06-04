@@ -1,0 +1,35 @@
+<%- include("../partials/head") -%>
+<%- include("../partials/nav") -%>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="container">
+            <h1>UPDATE CONTACT</h1>
+            <form action="/persons/<%= thisPerson._id %>?_method=PUT" method="POST">
+                <div>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" value="<%= thisPerson.name %>" required minlength="1">
+                </div>
+                <div>
+                <label for="frequency">Frequency: </label>
+                <input type="number" id="frequency" name="frequency" value="<%= thisPerson.frequency %>" required min="1">
+                </div>
+                <div>
+                <label for="date">Last Contact Date: </label>
+                <input type="text" id="date" name="date" value="<%= thisPerson.date %>">
+                </div>
+                <div>
+                <label for="notes">Notes: </label>
+                <input type="text" id="notes" name="notes" value="<%= thisPerson.notes %>"  min="1">
+                </div>
+                <div>
+                <label for="image">Image: </label>
+                <input type="text" id="image" name="image" value="<%= thisPerson.image %>">
+                </div>  
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+<%- include("../partials/footer") -%>

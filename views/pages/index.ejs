@@ -1,0 +1,25 @@
+<%- include("../partials/head") -%>
+<%- include("../partials/nav") -%>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="container">
+            <h1>Inner Circle</h1>
+            <p>Your innermost social circle is vital to your happiness and growth. Kudos for staying in touch with these loved ones~</p>
+        </div>
+        <!-- BOTTOM HALF OF INDEX -->
+        <div class="container">
+            <h1>My Inner Circle</h1>
+            <!-- START OF INDEX ALL PERSONS -->
+            <div class="index-all-books" id="index-all-books">
+                <!-- for loop for the length of array -->
+                <% allPersons.forEach(person => { %>
+                    <%- include("../partials/single-person", {person:person}) -%>
+                <% }); %>
+                <!-- person is the individual object inside data.js -->
+            </div>
+            <!-- END OF INDEX ALL PERSONS -->
+        </div>
+    </div>
+
+<%- include("../partials/footer") -%>
