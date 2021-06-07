@@ -1,6 +1,13 @@
 <div class="index-book">
     <span><i><%= person.name %></i></span>
-    <span>by <%= person.frequency %></span>
+    <span><%= person.frequency %></span>
     <span><%= person.date %></span> 
     <span><%= person.notes %></span> 
+    <span><%= difference %></span> 
 </div>
+<!-- I can write javascript in ejs files WITHOUT EJS SYNTAX SO IT DOESN'T SHOW UP! -->
+<!-- get inputted date, calc diff, display -->
+<!-- function: use person.date as the date of last meeting, 
+new Date() to get current date value 
+subtract 2 dates
+display the difference as the difference var, don't save this val as it changes each time -->

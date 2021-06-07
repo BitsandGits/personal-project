@@ -16,7 +16,7 @@ const personSchema = new Schema({
         min: 1
     },
     date: {
-        type: String,
+        type: Date,
         require: true,
     }, 
     notes: {
