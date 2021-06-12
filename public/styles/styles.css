@@ -1,14 +1,17 @@
 /* VARIABLES */
 :root{
-    --teal: #006B6B;
-    --light-teal: #009E9E;
+    --teal: #682A92;
+    --light-teal: #722E9A;
     --yellow: #FCCF14;
-    --blue: #063C5E;
-    --gray: #C2C2C2;
+    --blue: #47297B;
+    --gray: #FFE863;
     --grey: #C2C2C2;
     --white: #FFFFFF;
     --black:#000000;
+    --button:#5D2689
 }
+
+/* https://coolors.co/ffe863-ffe150-ffd93d-facb2e-f5bd1f-722e9a-682a92-5d2689-522882-47297b */
 
 /* ELEMENT */
 a{
@@ -29,14 +32,15 @@ ul{
     align-items: center;
 }
 .button{
-    background-color: var(--yellow);
+    background-color: var(--button);
     text-align: center;
     width: fit-content;
     margin: auto;
     display: block;
 }
 button{
-    background-color: var(--yellow);
+    background-color: var(--button);
+    color:var(--white);
     text-align: center;
     width:fit-content;
     margin: 0px 5px;
@@ -71,7 +75,7 @@ body {
 }
 .topnav a{
     float: left;
-    color: var(--white);
+    color: var(--yellow);
     text-align: center;
     padding: 10px 30px;
     text-decoration: none;
@@ -79,7 +83,7 @@ body {
     font-family: 'Fredericka the Great', cursive;
 }    
 .topnav a:hover {
-    background-color: var(--white);
+    background-color: var(--yellow);
     color: var(--black);
 }    
 .topnav a:active {
@@ -95,9 +99,11 @@ body {
 /* CONTENT */
 .content img{
     width:200px;
+    border-radius: 15px;
 }
 .container{
-    border: 3px solid var(--blue);
+    /* border: 3px solid var(--blue); */
+    border-radius: 25px;
     padding: 40px;
     margin: 50px;
     background-color:var(--white);
@@ -156,7 +162,7 @@ body {
     justify-content: space-around;
     text-align: center;
     width:200px;
-    padding:5px 20px;
+    padding: 15px 15px;
 }
 
 /* COMIC CARD */

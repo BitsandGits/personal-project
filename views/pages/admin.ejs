@@ -8,9 +8,9 @@
             <input type="button" class=button onclick="location.href='/admin-console/create-person';" value="ADD NEW CONTACT">
             <table>
                 <tr>
-                    <th>NAME</th>
-                    <th>EDIT</th>
-                    <th>DELETE</th>
+                    <th><h2>NAME</h2></th>
+                    <th><h2>EDIT</h2></th>
+                    <th><h2>DELETE</h2></th>
                 </tr>
                 <% allPersons.forEach(person => { %>
                     <%- include("../partials/person-listing", {person:person}) -%>
