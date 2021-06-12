@@ -5,7 +5,6 @@ const morgan = require("morgan");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const methodOverride = require("method-override");
-const mongoose = require("mongoose");
 
 // require connection
 require('./config/connection');
@@ -36,3 +35,6 @@ app.listen(PORT, () => {
 // .route = ability to do routing in application, can't use in app.js 
 const index = require("./routes/index-routes"); 
 app.use("/", index);
+
+// require cron jobs
+require("./cron-jobs");

@@ -8,9 +8,9 @@ const adminController = require("../controllers/admin-controller");
 // routes
 router.route("/")
     .get(adminController.admin);
-router.route("/create-book")
+router.route("/create-person")
     .get(adminController.create);
-router.route("/update-book/:id")
+router.route("/update-person/:id")
     .get(adminController.update); 
 
 module.exports = router;

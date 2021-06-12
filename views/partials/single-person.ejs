@@ -1,11 +1,22 @@
 <div class="index-book">
+    <img src="/images/<%= person.image %>" alt="Photo">
     <span><i><%= person.name %></i></span>
-    <span><%= person.frequency %></span>
-    <span><%= person.date %></span> 
-    <span><%= person.notes %></span> 
-    <span><%= difference %></span> 
+    <span><%= person.notes %></span>
+    <span><%= person.email %></span>
+    <span>Contact every <%= person.frequency %> days</span>
+    <span>Last contact: <%= person.date.toISOString().split('T')[0] %></span> 
+
+    <!-- When printed on the client-side the user timezone offset changes the date, so have to add/substract the offset (depending if it is GMT + or GMT -) in order to parse today's string to GMT 0 (which is the timezone used on the server-side) and display the correct values -->
+    <% let today = new Date() %>
+    <% const offset = today.getTimezoneOffset() %>
+    <% today = new Date(today.getTime() - (offset*60*1000)) %>
+
+    <% const diffTime = Math.abs(today - person.date); %>
+    <% const difference = parseInt(diffTime / (1000 * 60 * 60 * 24));  %>
+    
+    <span><%= difference %> days since last contact</span>
 </div>
-<!-- I can write javascript in ejs files WITHOUT EJS SYNTAX SO IT DOESN'T SHOW UP! -->
+<!-- Notes: I can write javascript in ejs files WITHOUT EJS SYNTAX SO IT DOESN'T SHOW UP! -->
 <!-- get inputted date, calc diff, display -->
 <!-- function: use person.date as the date of last meeting, 
 new Date() to get current date value 

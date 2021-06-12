@@ -10,6 +10,12 @@ const personSchema = new Schema({
         minlength: 1,
         trim: true
     },
+    email: {
+        type: String,
+        require: true,
+        minlength: 1,
+        trim: true
+    },
     frequency: {
         type: Number,
         require: true,
@@ -17,7 +23,7 @@ const personSchema = new Schema({
     },
     date: {
         type: Date,
-        require: true,
+        require: true
     }, 
     notes: {
         type: String,
@@ -26,7 +32,11 @@ const personSchema = new Schema({
     image: {
         type: String,
         trim: true
-    }
+    },
+    reminderSent: {
+        type: Boolean,
+        default: false
+    },
 })
 
 const Person = mongoose.model("Person", personSchema);

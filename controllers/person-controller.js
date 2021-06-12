@@ -17,6 +17,7 @@ module.exports = {
         // use Comic model 
         const newPerson = new Person({
             name: request.body.name,
+            email: request.body.email,
             frequency: request.body.frequency,
             date: request.body.date,
             notes: request.body.notes,
@@ -27,14 +28,26 @@ module.exports = {
     },
     person_update: (request, response) => {
         const { id } = request.params;
-        // use findByIdAndUpdate method 
-        Person.findByIdAndUpdate({_id: id}, {$set:{
+
+        let newData = {
             name: request.body.name,
+            email: request.body.email,
             frequency: request.body.frequency,
             date: request.body.date,
             notes: request.body.notes,
             image: request.body.image
-        }}, {new: true}, (error) => {
+        }
+
+        if (request.body.date !== request.body.previousDate) {
+            newData.reminderSent = false;
+        }
+
+        // use findByIdAndUpdate method 
+        Person.findByIdAndUpdate(
+            {_id: id},
+            {$set: newData},
+            {new: true},
+            (error) => {
             if(error) {
                 return error;
             } else {                
