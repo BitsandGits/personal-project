@@ -1,17 +1,14 @@
 /* VARIABLES */
+/* https://coolors.co/ffe863-ffe150-ffd93d-facb2e-f5bd1f-722e9a-682a92-5d2689-522882-47297b */
 :root{
-    --teal: #682A92;
-    --light-teal: #722E9A;
+    --gradient-dark: #682A92;
     --yellow: #FCCF14;
-    --blue: #47297B;
+    --purple: #47297B;
     --gray: #FFE863;
-    --grey: #C2C2C2;
     --white: #FFFFFF;
     --black:#000000;
-    --button:#5D2689
+    --button: #5d2689;
 }
-
-/* https://coolors.co/ffe863-ffe150-ffd93d-facb2e-f5bd1f-722e9a-682a92-5d2689-522882-47297b */
 
 /* ELEMENT */
 a{
@@ -19,12 +16,12 @@ a{
 }
 h1, h2{
     text-align: center;
-    color:var(--blue);
-    font-family: 'Fredericka the Great', cursive;
+    color:var(--purple);
+    font-family: "Optima", sans-serif;
 }
 h3{
     color:var(--yellow);
-    font-family: 'Fredericka the Great', cursive;
+    font-family: "Optima", sans-serif;
 }
 ul{
     display: flex;
@@ -54,22 +51,23 @@ body {
     max-width: 100vw;
     margin: 0;
     /* overflow-x: hidden; */
-    background-image: linear-gradient(180deg,var(--white),var(--teal));
+    background-image: linear-gradient(180deg,var(--white),var(--gradient-dark));
 }
 
 /* HEADER */
 .logo{
-    background-color: var(--blue);
+    background-color: var(--purple);
+    border-bottom: 5px solid var(--yellow);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .logo img{
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .topnav{
-    background-color: var(--blue);
+    background-color: var(--purple);
     display: flex;
     align-items: center;
 }
@@ -80,7 +78,7 @@ body {
     padding: 10px 30px;
     text-decoration: none;
     font-size: 1.1rem;
-    font-family: 'Fredericka the Great', cursive;
+    font-family: "Optima", sans-serif;
 }    
 .topnav a:hover {
     background-color: var(--yellow);
@@ -88,7 +86,7 @@ body {
 }    
 .topnav a:active {
     background-color: var(--yellow);
-    color: var(--blue);
+    color: var(--purple);
     font-weight: bold;
 }
 .logo i{
@@ -102,7 +100,7 @@ body {
     border-radius: 15px;
 }
 .container{
-    /* border: 3px solid var(--blue); */
+    /* border: 3px solid var(--purple); */
     border-radius: 25px;
     padding: 40px;
     margin: 50px;
@@ -114,7 +112,7 @@ body {
 
 /* FOOTER */
 .footer{
-    background-color:var(--blue);
+    background-color:var(--purple);
     color: var(--white);
     border-top: 5px solid var(--yellow);
     padding:10px;
@@ -126,22 +124,22 @@ body {
     color: var(--white);
     display:block;
     text-decoration: none;
-    font-family: 'Fredericka the Great', cursive;
+    font-family: "Optima", sans-serif;
 }
 .footer a:hover {
-    background-color: var(--white);
-    color: var(--black);
+    background-color: var(--yellow);
+    color: var(--purple);
 }    
 .footer a:active {
     background-color: var(--yellow);
-    color: var(--blue);
+    color: var(--purple);
     font-weight: bold;
 }
 .footer img{
     width:150px;
 }
 .footer span{
-    font-family: 'Fredericka the Great', cursive;
+    font-family: "Optima", sans-serif;
 }
 .cell{
     display:inline-block;
@@ -183,7 +181,7 @@ body {
     margin: 10px 20px;
 }
 .card-top{
-    background-color: var(--blue);
+    background-color: var(--purple);
     border-radius: 40px 40px 0px 0px;
     border: 5px solid var(--yellow);
     text-align: center;
@@ -211,7 +209,7 @@ body {
 
 /* TABLE */ 
 td,th{
-    border:1px solid var(--blue);
+    border:1px solid var(--purple);
     height: 20px;
     min-width:fit-content;
     padding: 5px 10px;
@@ -253,14 +251,15 @@ label{
 
 /* BUTTONS ON PAGES */
 input[type=button], input[type=submit]{
-    background-color: var(--yellow);
+    background-color: var(--button);
+    color: var(--white);
     text-align: center;
     width: fit-content;
     margin: auto;
     display: block;
 }
 input[value="EDIT"]{
-    background-color: var(--blue);
+    background-color: var(--purple);
     color: var(--white);
     text-align: center;
     width: fit-content;

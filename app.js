@@ -5,6 +5,8 @@ const morgan = require("morgan");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const methodOverride = require("method-override");
+const session = require("express-session");
+const passport = require("passport");
 
 // require connection
 require('./config/connection');
@@ -23,6 +25,14 @@ app.set("view engine", "ejs");
 app.use(morgan("combined"));
 app.use(methodOverride("_method"));
 
+app.use(session({
+    secret: process.env.SECRET_KEY,
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 // listen 
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
@@ -37,4 +47,4 @@ const index = require("./routes/index-routes");
 app.use("/", index);
 
 // require cron jobs
-require("./cron-jobs");
+// require("./cron-jobs");

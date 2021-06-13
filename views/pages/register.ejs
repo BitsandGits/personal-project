@@ -1,0 +1,22 @@
+<%- include("../partials/head") -%>
+<%- include("../partials/nav") -%>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="container">
+            <h1>REGISTER</h1>
+            <form action="/register" method="post">
+                <div>
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" placeholder="Password" required minlength="10">
+                </div>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+<%- include("../partials/footer") -%>
