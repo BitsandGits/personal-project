@@ -1,13 +1,13 @@
 const cron = require('node-cron');
 const nodemailer = require('nodemailer');
 
-// Reminder email template
+// require reminder email template
 const reminderTemplate = require("./templates/reminder");
 
-// Person schema
+// require Person schema
 const Person = require("./models/person-model");
 
-// Function to send the email. Takes as parameters the email address it is going to send the email to, and the person.
+// Function to send the email. Takes as parameters the email address it will send the email to and the person 
 const sendEmail = async (emailAddress, person) => {
     let transporter = nodemailer.createTransport({
         host: process.env.CONFIG_MAIL_HOST,
@@ -27,14 +27,13 @@ const sendEmail = async (emailAddress, person) => {
     });
 
     let info = await transporter.sendMail({
-        from: '"InnerCircle" <inner-circle@email.com>',
+        from: '"InnerCircle" <bitsandgits@gmail.com>',
         to: emailAddress,
         subject: "Contact Reminder - InnerCircle",
         html: reminderTemplate(person),
     });
 
     console.log("Email sent: %s", info.messageId);
-
     return true;
 }
 

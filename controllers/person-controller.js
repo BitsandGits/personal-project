@@ -8,13 +8,13 @@ module.exports = {
             if(error) {
                 return error;
             } else {
-                // pull up the original info via found id 
+                // pull up original info via found id 
                 response.render("pages/person", {thisPerson:foundPerson});
             }
         })
     },
     person_create: (request, response) => {
-        // use Comic model 
+        // use Person model 
         const newPerson = new Person({
             name: request.body.name,
             email: request.body.email,

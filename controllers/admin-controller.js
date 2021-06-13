@@ -1,5 +1,6 @@
 const Person = require("../models/person-model");
 
+// everything admin is under authentication 
 module.exports = {
     admin: (request, response) => {
         if (request.isAuthenticated()) {
@@ -22,7 +23,7 @@ module.exports = {
             response.redirect("/");
         }
     },
-    // PRE-Submit: find book, populate with old data 
+    // PRE-Submit: find person, populate with old data 
     update: (request, response) => {
         if (request.isAuthenticated()) {
             // find id and save

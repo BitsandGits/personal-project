@@ -38,8 +38,6 @@ app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
 
-// routes have been moved to routes ejs files
-
 // require index 
 // .use = ability to let application use something: app.use("/") passes info along to another js file 
 // .route = ability to do routing in application, can't use in app.js 

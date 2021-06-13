@@ -5,13 +5,14 @@
     <div class="card">
         <div class="card-top">
             <p class="title"><%= thisPerson.name %></p>
-            <img src="" alt="Photo" />
+            <img src="/images/<%= thisPerson.image %>" alt="Photo" />
         </div>
         <div class="card-bottom">
-            <p><span style="color: #063C5E;font-weight: bold;text-decoration: underline;">Name:</span> <span style="font-style: italic;"> <%= thisPerson.title %></span></p>
-            <p><span style="color: #063C5E;font-weight: bold;text-decoration: underline;">Frequency:</span> <%= thisPerson.frequency %></p>
-            <p><span style="color: #063C5E;font-weight: bold;text-decoration: underline;">Last Contact:</span> <%= thisPerson.date %></p>
-            <p><span style="color: #063C5E;font-weight: bold;text-decoration: underline;">Notes:</span> <%= thisPerson.notes %></p>
+            <p><span style="color: #FCCF14;font-weight: bold;">Name:</span> <span style="font-style: italic;"> <%= thisPerson.name %></span></p>
+            <p><span style="color: #FCCF14;font-weight: bold;">Note:</span> <%= thisPerson.notes %></p>
+            <p><span style="color: #FCCF14;font-weight: bold;">Frequency:</span>  contact every <%= thisPerson.frequency %> days</p>
+            <p><span style="color: #FCCF14;font-weight: bold;">Last Contact:</span> <%= thisPerson.date.toISOString().split('T')[0] %></p>
+            <p><span style="color: #FCCF14;font-weight: bold;">Email:</span> <%= thisPerson.email %></p>
         </div>
     </div>
 

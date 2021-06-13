@@ -13,7 +13,6 @@ module.exports = {
                 response.render("pages/index", {allPersons: persons}); // pass allPersons to index.ejs
             }
         }).sort({name:1})
-        // response.render("pages/index", {allPersons: Person});
     }, 
     about: (request, response) => {
         response.render("pages/about");
