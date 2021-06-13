@@ -98,6 +98,7 @@ body {
 .content img{
     width:200px;
     border-radius: 15px;
+    border: 3px solid var(--yellow);
 }
 .container{
     /* border: 3px solid var(--purple); */

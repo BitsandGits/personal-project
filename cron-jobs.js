@@ -39,7 +39,7 @@ const sendEmail = async (emailAddress, person) => {
 }
 
 // Run the function every 5 minutes. See this link for more use cases https://www.npmjs.com/package/node-cron
-cron.schedule('*/5 * * * *', async () => {
+cron.schedule('*/1 * * * *', async () => {
     // Find all persons with "reminderSent: false"
     const persons = await Person.find({
         reminderSent: false,

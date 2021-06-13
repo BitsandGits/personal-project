@@ -47,4 +47,4 @@ const index = require("./routes/index-routes");
 app.use("/", index);
 
 // require cron jobs
-// require("./cron-jobs");
+require("./cron-jobs");
