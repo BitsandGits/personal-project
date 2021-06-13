@@ -7,7 +7,7 @@ const reminderTemplate = require("./templates/reminder");
 // Person schema
 const Person = require("./models/person-model");
 
-// Function to send the email. It takes as parameters the email address it is going to send the email to, and the person.
+// Function to send the email. Takes as parameters the email address it is going to send the email to, and the person.
 const sendEmail = async (emailAddress, person) => {
     let transporter = nodemailer.createTransport({
         host: process.env.CONFIG_MAIL_HOST,
