@@ -2,7 +2,7 @@
     <a href = "./persons/<%= person._id %>"><img src="/images/<%= person.image %>" alt="Photo"></a>
     <span><a href = "./persons/<%= person._id %>"><b><%= person.name %></b></a></span>
     <span><%= person.notes %></span>
-    <span><%= person.email %></span>
+    <!-- <span><%= person.email %></span> -->
     <span>Contact every <%= person.frequency %> days</span>
     <span>Last contact: <%= person.date.toISOString().split('T')[0] %></span> 
 
